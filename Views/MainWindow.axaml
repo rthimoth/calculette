@@ -1,0 +1,129 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:CalculatorQuest.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CalculatorQuest.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="CalculatorQuest">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    
+    
+    <Grid>
+        
+        
+        <!-- Grille parente -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" /> <!-- Prend 1/4 de la page -->
+            <RowDefinition Height="3*" /> <!-- Prend 3/4 de la page -->
+        </Grid.RowDefinitions>
+        
+
+        <!-- Grille en haut pour le 1/4 de la page -->
+        
+        <Grid Grid.Row="0">
+        <Grid.RowDefinitions>
+            <RowDefinition /> 
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Name="MaTextBox" Width="200" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock Name="Result" Width="200" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
+        </Grid>
+
+        <!-- Grille en bas pour le 3/4 de la page -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="C" Click="Button_Click"></Button>
+            </Border>
+            
+            <Border Grid.Row="0" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="CE" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="←" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="%" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="/" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="*" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="+/-" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="+" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="-" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="1" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="2" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="3" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="4" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="5" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="6" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="7" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="8" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="9" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="6" Grid.Column="0">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="." Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="6" Grid.Column="1">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="0" Click="Button_Click"></Button>
+            </Border>
+            <Border Grid.Row="6" Grid.Column="2">
+                <Button Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Content="=" Click="Button_Click"></Button>
+            </Border>
+        </Grid>
+    </Grid>
+    
+</Window>
